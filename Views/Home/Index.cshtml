@@ -1,0 +1,19 @@
+﻿
+
+@model HomeViewModel
+
+@await Html.PartialAsync("Carousel")
+
+
+
+<div class="row ms-5">
+    <h2>Prefered drinks of the week </h2>
+    <h4>Clients preferences - just for you!</h4>
+    <div class="col-sm-4">
+        @foreach (var drink in Model.PreferredDrinks)
+        {
+            @Html.Partial("DrinkSummary", drink)
+        }
+    </div>
+
+</div>
